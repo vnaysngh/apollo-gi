@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ego-gym
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
