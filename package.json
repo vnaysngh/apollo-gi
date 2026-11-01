@@ -1,1 +1,12 @@
-{"name":"ego-gym","version":"5.0.0","private":true,"description":"A tiny pixel sports arcade for two familiar faces.","scripts":{"dev":"node server.mjs","start":"node server.mjs","build":"node build.mjs","check":"node --check i18n.js && node --check app.js && node --check server.mjs && node --check build.mjs"}}
+{
+  "name": "ego-gym",
+  "version": "5.0.0",
+  "private": true,
+  "description": "A tiny pixel sports arcade for two familiar faces.",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node build.mjs",
+    "check": "node --check i18n.js && node --check app.js && node --check server.mjs && node --check build.mjs && node --check activity.js && node --check analytics-config.js"
+  }
+}
