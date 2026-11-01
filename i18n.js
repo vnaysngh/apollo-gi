@@ -1,6 +1,8 @@
 'use strict';
 let language='en';
 const TH={
+'OPTIONAL STATS':'สถิติการเล่น (ไม่บังคับ)','YOUR CHOICE':'คุณเลือกได้','ALLOW BASIC STATS':'อนุญาตสถิติพื้นฐาน','PLAY WITHOUT STATS':'เล่นโดยไม่ส่งสถิติ','STATS ON / TURN OFF':'ส่งสถิติอยู่ / ปิด','STATS OFF / OPTIONS':'ปิดสถิติอยู่ / ตัวเลือก','Share anonymous activity with the creator through PostHog: visits, sports started, and apology openings. No names or recordings. Playing without stats works the same.':'แชร์สถิติการเล่นแบบไม่ระบุตัวตนกับผู้สร้างผ่าน PostHog ได้แก่ การเข้าชม กีฬาที่เริ่มเล่น และการเปิดคำขอโทษ ไม่มีชื่อหรือการบันทึกหน้าจอ เลือกไม่ส่งสถิติก็เล่นได้เหมือนกัน',
+
 'Character artwork could not load. Please refresh.':'โหลดภาพตัวละครไม่สำเร็จ กรุณารีเฟรชหน้าเว็บ',
 'BOXING':'มวยสากล','ARCHERY':'ยิงธนู','SHOOTING':'ยิงเป้า','BJJ':'ยิวยิตสู',
 'HANDS UP. EGO DOWN.':'ยกการ์ดขึ้น ลดอีโก้ลง','YOU MAKE AN EXCELLENT POINT.':'เข้าเป้า ทั้งลูกธนูและคำพูด','THE CARNIVAL OF BAD TAKES.':'ซุ้มยิงความคิดที่ควรเก็บไว้','TECHNIQUE OVER EGO.':'ฝีมือเหนืออีโก้',
