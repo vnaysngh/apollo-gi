@@ -4,10 +4,9 @@
  const config=globalThis.EGO_ANALYTICS||{};
  const hosts=new Set(['https://us.i.posthog.com','https://eu.i.posthog.com']);
  const token=typeof config.projectToken==='string'?config.projectToken:'';
- const privacy=navigator.globalPrivacyControl===true||navigator.doNotTrack==='1';
  const preview=['localhost','127.0.0.1','::1'].includes(location.hostname)||new URLSearchParams(location.search).get('preview')==='1';
  const configured=hosts.has(config.host)&&/^phc_[A-Za-z0-9_-]{10,}$/.test(token)&&typeof crypto.randomUUID==='function';
- const available=configured&&!privacy&&!preview;
+ const available=configured&&!preview;
  let enabled=true,visitId='',blocked=false,observer=()=>{};
  try{enabled=localStorage.getItem('ego-stats-disabled')!=='1'}catch{}
  const sent=new Set(),pending=new Set();
@@ -29,7 +28,7 @@
  function preference(value){enabled=value;try{if(value)localStorage.removeItem('ego-stats-disabled');else localStorage.setItem('ego-stats-disabled','1')}catch{}observer()}
  globalThis.EgoStats=Object.freeze({
   get available(){return available},get decided(){return true},get allowed(){return available&&enabled},
-  get state(){return privacy?'privacy':preview?'preview':!configured?'unconfigured':!enabled?'off':blocked?'blocked':'on'},
+  get state(){return preview?'preview':!configured?'unconfigured':!enabled?'off':blocked?'blocked':'on'},
   onChange(callback){observer=callback},
   allow(language){if(!available)return;preference(true);event('visit_started',{language})},
   decline(){preference(false)},event
